@@ -1,10 +1,10 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import {RouterLink, RouterView } from 'vue-router'
 
 const links = [
   { title: "Inicio", href: '#hero' },
   { title: "Informacion", href: '#information' },
-  { title: "Iniciar Sección", href: '#login' },
+  { title: "Iniciar Sección", href: 'login' },
   { title: "Registrarse", href: '#register' },
 ]
 </script>
@@ -15,7 +15,7 @@ const links = [
       <img src="/public/parking-dark.svg" alt="" class="w-36 h-36">
       <ul class="flex items-center justify-between gap-6">
         <li v-for="(link, key) in links" :key="key">
-          <a :href="link.href">{{ link.title }}</a>
+          <router-link :to="link.href" >{{ link.title }}</router-link>
         </li>
       </ul>
       <button class="text-center bg-blue-400 p-4 rounded-md cursor-pointer">Contáctanos!</button>
