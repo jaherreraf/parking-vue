@@ -15,10 +15,14 @@ const links = [
       <img src="/public/parking-dark.svg"  class="w-36 h-36">
       <ul class="flex items-center justify-between gap-6">
         <li v-for="(link, key) in links" :key="key" class="text-blue-400 transition-all duration-200 hover:text-black cursor-pointer">
-          <router-link :to="link.href" >{{ link.title }}</router-link>
+          <router-link :to="link.href" class="cursor-pointer">{{ link.title }}</router-link>
         </li>
       </ul>
-      <button class="text-center bg-blue-400 p-4 rounded-md cursor-pointer">Contáctanos!</button>
+      <button class="text-center bg-blue-400 text-white p-4 rounded-md cursor-pointer">
+        <router-link to="/wallet-app" class="cursor-pointer">
+          usar app!
+        </router-link>
+      </button>
     </header>
     <main class="flex-grow">
       <RouterView />

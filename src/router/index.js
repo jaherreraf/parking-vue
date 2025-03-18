@@ -19,6 +19,11 @@ const router = createRouter({
       name: 'register',
       component: () => import('../views/Register.vue'),
     },
+    {
+      path: '/wallet-app',
+      name: 'wallet-app',
+      component: () => import('../views/AppWallet.vue'),
+    },
   ],
 })
 

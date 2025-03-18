@@ -1,5 +1,10 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+const social = [
+  { title: 'Facebook', img: "/public/facebook.svg" },
+  { title: 'X', img: "/public/x.svg" },
+  { title: 'Instagram', img: "/public/instagram.svg" },
+]
 </script>
 
 <template>
@@ -60,10 +65,18 @@ import { RouterLink } from 'vue-router';
         </div>
       </div>
     </div>
-    <footer class="w-full shadow-lg">
-      <img src="/public/parking-dark.svg"  class="w-36 h-36">
-      
-
+    <footer class="w-dvw  shadow-lg grid grid-cols-7 items-center justify-center">
+      <img src="/public/parking-dark.svg"  class="w-36 h-36 col-span-2">
+      <ul class="flex items-center justify-center gap-4 col-span-3">
+        <li v-for="item , key in social" :key :title="item.title" class="w-auto h-auto cursor-pointer">
+          <img :src="item.img" :alt="item.title" class="w-12 h-12"/>
+        </li>
+      </ul>
+      <span class="col-span-2 font-medium text-2xl">Ahorra tu tiempo, con Nuestro Servicios</span>
+      <div class="col-span-7 shadow-2xl flex justify-center items-center gap-4 border-t py-4">
+        <img src="/public/location.svg" class="w-12 h-12">
+        <span>Universidad Santa Marìa, Campus la Florencia</span>
+      </div>
 
     </footer>
   </main>
