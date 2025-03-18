@@ -4,8 +4,8 @@ import { RouterLink } from 'vue-router';
 
 <template>
   <main class="w-full h-screen flex flex-col items-center justify-center">
-    <div id="hero" class="grid grid-cols-2 items-center justify-center w-full min-h-full max-w-7xl px-4">
-      <section class="flex flex-col items-center justify-center text-center">
+    <div id="hero" class="grid grid-cols-2 mt-96 items-center justify-center w-full min-h-full max-w-7xl px-4">
+      <section class="flex flex-col items-center justify-center text-center h-full">
         <h1 class="text-4xl font-bold mb-8">
           Ahorra tu tiempo en pagos y largas colas, haz tu pago desde una app
         </h1>
@@ -22,7 +22,7 @@ import { RouterLink } from 'vue-router';
           </button>
         </div>
       </section>
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center h-full">
         <img src="/public/parking.png" alt="Parking" class="max-w-full h-auto">
       </div>
     </div>
@@ -60,7 +60,9 @@ import { RouterLink } from 'vue-router';
         </div>
       </div>
     </div>
-    <footer class="w-full">
+    <footer class="w-full shadow-lg">
+      <img src="/public/parking-dark.svg"  class="w-36 h-36">
+      
 
 
     </footer>

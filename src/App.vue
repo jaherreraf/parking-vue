@@ -12,7 +12,7 @@ const links = [
 <template>
   <div class="flex flex-col h-screen text-lg">
     <header class="w-full p-4 flex items-center justify-between shadow-xs font-medium">
-      <img src="/public/parking-dark.svg" alt="" class="w-36 h-36">
+      <img src="/public/parking-dark.svg"  class="w-36 h-36">
       <ul class="flex items-center justify-between gap-6">
         <li v-for="(link, key) in links" :key="key" class="text-blue-400 transition-all duration-200 hover:text-black cursor-pointer">
           <router-link :to="link.href" >{{ link.title }}</router-link>
