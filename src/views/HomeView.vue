@@ -76,7 +76,7 @@ import { RouterLink } from 'vue-router';
       <span class="md:col-span-2 col-start-2 font-medium text-2xl">Ahorra tu tiempo, con Nuestro Servicios</span>
       <div class="mt-4 col-span-2 md:col-span-7 shadow-2xl flex justify-center items-center gap-4 border-t py-4">
         <img src="/public/location.svg" class="w-12 h-12">
-        <span>Universidad Santa Marìa, Campus la Florencia</span>
+        <span>Universidad Santa María, Campus la Florencia</span>
       </div>
 
     </footer>

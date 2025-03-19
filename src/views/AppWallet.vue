@@ -35,6 +35,10 @@
                         <img src="/public/car.svg" class="w-12 h-12">
                         <span>Operaciones</span>
                      </div>
+                     <div class="flex flex-col items-center justify-center gap-2 cursor-pointer" @click="toggleItem(3)">
+                        <img src="/public/map.svg" class="w-12 h-12">
+                        <span>Guía</span>
+                     </div>
                      <div class="flex flex-col items-center justify-center gap-2 cursor-pointer">
                         <img src="/public/suitcase.svg" class="w-12 h-12">
                         <span>Movimientos</span>

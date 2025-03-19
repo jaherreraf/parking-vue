@@ -18,7 +18,7 @@ const links = [
         </li>
       </ul>
       <button class="hidden md:block text-center bg-blue-400 text-white p-4 rounded-md cursor-pointer">
-        <router-link to="/wallet-app" class="cursor-pointer">
+        <router-link to="/app" class="cursor-pointer">
           usar app!
         </router-link>
       </button>
