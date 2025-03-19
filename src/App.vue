@@ -3,7 +3,6 @@ import {RouterLink, RouterView } from 'vue-router'
 import Sidebar from '@/components/Sidebar.vue'
 const links = [
   { title: "Inicio", href: '/' },
-  { title: "Informacion", href: '/#information' },
   { title: "Iniciar Sección", href: 'login' },
   { title: "Registrarse", href: 'register' },
 ]

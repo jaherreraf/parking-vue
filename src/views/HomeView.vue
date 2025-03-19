@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router';
         </div>
       </section>
       <div class="flex items-center justify-center h-full">
-        <img src="/public/parking.png" alt="Parking" class="max-w-full h-auto">
+        <img src="/public/parking.svg" alt="Parking" class="max-w-full h-auto">
       </div>
     </div>
     <div id="information" class="flex items-center justify-center max-w-7xl h-full p-8 bg-gray-50">

@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 const links = [
   { title: "Inicio", href: '/' },
-  { title: "Informacion", href: '/#information' },
   { title: "Iniciar Sección", href: 'login' },
   { title: "Registrarse", href: 'register' },
 ]

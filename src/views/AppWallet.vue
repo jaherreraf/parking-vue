@@ -1,17 +1,12 @@
 <script setup>
-import { ref } from 'vue';
-const activeSpinner = ref(false)
-function buy(){
-    console.log('jejekj')
-    activeSpinner.value = true
-    setTimeout(()=>{},50000)
-    activeSpinner.value = false
-
-
-}
-function movements(){
-
-}
+    import { ref } from 'vue';
+    import Accordion from '@/components/Accordion.vue';
+    import vehicleManagement from '@/components/vehicleManagement.vue'
+    const activeSpinner = ref(false)
+    const  activeItem = ref(null)
+    function toggleItem(item){
+        activeItem.value = activeItem.value === item ? null: item
+    }
 </script>
 <template>
     <div class="w-full h-full flex flex-col gap-6 justify-start mt-6">
@@ -26,11 +21,19 @@ function movements(){
         </div>
         <div class=" flex items-center justify-center">
             <div class=" relative w-96 md:w-1/2 h-24 bg-red-700 rounded-lg">
+                <div class="absolute top-2 right-4 flex md:flex-col items-center justify-center gap-2 text-white">
+                    <strong>wallet</strong>
+                    <span>BS 0,00</span>
+                </div>
                 <div class="absolute -bottom-12 left-1/2 transform -translate-x-1/2 h-24 w-80 md:w-96 rounded-lg bg-gray-100 flex items-center justify-center gap-6">
                     <!-- Contenido del div centrado -->
-                     <div class="flex flex-col items-center justify-center gap-2 cursor-pointer" @click="buy()">
+                     <div class="flex flex-col items-center justify-center gap-2 cursor-pointer" @click="toggleItem(1)">
                         <img src="/public/wallet.svg" class="w-12 h-12">
                         <span>Depositar</span>
+                     </div>
+                     <div class="flex flex-col items-center justify-center gap-2 cursor-pointer" @click="toggleItem(2)">
+                        <img src="/public/car.svg" class="w-12 h-12">
+                        <span>Operaciones</span>
                      </div>
                      <div class="flex flex-col items-center justify-center gap-2 cursor-pointer">
                         <img src="/public/suitcase.svg" class="w-12 h-12">
@@ -50,6 +53,12 @@ function movements(){
                     </svg>
                     <span class="sr-only">Loading...</span>
                 </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4" v-if="activeItem==1">
+                <Accordion/>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4" v-if="activeItem==2">
+               <vehicleManagement/>
             </div>
 
         </div>
