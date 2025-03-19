@@ -1,15 +1,10 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-const social = [
-  { title: 'Facebook', img: "/public/facebook.svg" },
-  { title: 'X', img: "/public/x.svg" },
-  { title: 'Instagram', img: "/public/instagram.svg" },
-]
 </script>
 
 <template>
-  <main class="w-full h-screen flex flex-col items-center justify-center">
-    <div id="hero" class="grid grid-cols-2 mt-96 items-center justify-center w-full min-h-full max-w-7xl px-4">
+  <main class="w-full h-full flex flex-col items-center justify-center">
+    <div id="hero" class="grid grid-rows-2 md:grid-cols-2 items-center justify-center w-full min-h-[700px] h-full max-w-7xl px-4">
       <section class="flex flex-col items-center justify-center text-center h-full">
         <h1 class="text-4xl font-bold mb-8">
           Ahorra tu tiempo en pagos y largas colas, haz tu pago desde una app
@@ -65,15 +60,21 @@ const social = [
         </div>
       </div>
     </div>
-    <footer class="w-dvw  shadow-lg grid grid-cols-7 items-center justify-center">
-      <img src="/public/parking-dark.svg"  class="w-36 h-36 col-span-2">
-      <ul class="flex items-center justify-center gap-4 col-span-3">
-        <li v-for="item , key in social" :key :title="item.title" class="w-auto h-auto cursor-pointer">
-          <img :src="item.img" :alt="item.title" class="w-12 h-12"/>
+    <footer class="w-dvw  shadow-lg grid grid-cols-2 md:grid-cols-7 items-center justify-center">
+      <img src="/public/parking-dark.svg"  class="w-36 h-36 row-start-1 md:col-span-2">
+      <ul class="flex items-center justify-center gap-4 row-start-2 md:row-start-1 col-span-2 md:col-span-3">
+        <li class="w-auto h-auto cursor-pointer" title="Facebook">
+          <img src="/public/facebook.svg"  class="w-12 h-12"/>
+        </li>
+        <li class="w-auto h-auto cursor-pointer" title="X">
+          <img src="/public/x.svg"  class="w-12 h-12"/>
+        </li>
+        <li class="w-auto h-auto cursor-pointer" title="Instagram">
+          <img src="/public/instagram.svg"  class="w-12 h-12"/>
         </li>
       </ul>
-      <span class="col-span-2 font-medium text-2xl">Ahorra tu tiempo, con Nuestro Servicios</span>
-      <div class="col-span-7 shadow-2xl flex justify-center items-center gap-4 border-t py-4">
+      <span class="md:col-span-2 col-start-2 font-medium text-2xl">Ahorra tu tiempo, con Nuestro Servicios</span>
+      <div class="mt-4 col-span-2 md:col-span-7 shadow-2xl flex justify-center items-center gap-4 border-t py-4">
         <img src="/public/location.svg" class="w-12 h-12">
         <span>Universidad Santa Marìa, Campus la Florencia</span>
       </div>
