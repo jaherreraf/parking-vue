@@ -6,6 +6,16 @@ const links = [
   { title: "Iniciar Sección", href: 'login' },
   { title: "Registrarse", href: 'register' },
 ]
+
+import { useCounterStore } from '@/stores/database';
+import { onMounted } from 'vue';
+
+const store = useCounterStore();
+
+onMounted(() => {
+  store.fetchUsers(); // Llama a fetchUsers cuando el componente se monte
+  console.log('Usuarios en el store:', store.users); // Imprime los usuarios
+})
 </script>
 
 <template>
